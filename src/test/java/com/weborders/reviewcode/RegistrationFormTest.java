@@ -9,6 +9,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class RegistrationFormTest {
+
     WebDriver driver;
     @Before
     public void setUp(){
@@ -26,7 +27,7 @@ public class RegistrationFormTest {
         // enter value in firstname
         driver.findElement(By.name("firstname")).sendKeys("John");
         // click sign up
-        driver.findElement(By.id("wooden_spoon")).click();
+        driver.findElement(By.tagName("button")).click();
         // verify last name is required message is displayed
         Assert.assertTrue(driver.findElement(By.xpath("//small[.='last name is required']")).isDisplayed());
     }
@@ -39,7 +40,7 @@ public class RegistrationFormTest {
         // enter value in lastname
         driver.findElement(By.name("lastname")).sendKeys("Doe");
         // click sign up
-        driver.findElement(By.id("wooden_spoon")).click();
+        driver.findElement(By.tagName("button")).click();
         // verify email is required message is displayed
         Assert.assertTrue(driver.findElement(By.xpath("//small[.='username is required']")).isDisplayed());
 
@@ -54,7 +55,7 @@ public class RegistrationFormTest {
         // enter value in username
         driver.findElement(By.name("username")).sendKeys("johndoe");
         // click sign up
-        driver.findElement(By.id("wooden_spoon")).click();
+        driver.findElement(By.tagName("button")).click();
         // verify email is required message is displayed
         Assert.assertTrue(driver.findElement(By.xpath("//small[.='email address is required']")).isDisplayed());
     }
