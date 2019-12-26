@@ -26,7 +26,7 @@ public class RegistrationPage {
     @FindBy(xpath = "//small[.='username is required']")
     public WebElement usernameErrorMsg;
 
-    @FindBy(xpath = "//small[.='email is required']")
+    @FindBy(xpath = "//small[.='email address is required']")
     public WebElement emailErrorMsg;
 
     @FindBy(tagName = "button")
