@@ -9,6 +9,7 @@ import org.openqa.selenium.support.ui.Select;
 public class RegistrationPage {
 
     public RegistrationPage() {
+
         PageFactory.initElements(Driver.get(), this);
     }
 
